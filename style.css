@@ -28,6 +28,7 @@ body {
   .time-block {
     text-align: center;
     border-radius: 15px;
+    width: 80%;
   }
   
   .row {
@@ -40,7 +41,6 @@ body {
     background-color: #ffffff;
     color: #000000;
     border-top: 1px dashed #000000;
-    display: block;
     width: 10%;
   }
   
