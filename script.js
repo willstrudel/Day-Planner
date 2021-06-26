@@ -1,3 +1,6 @@
+
+console.log("script imported");
+
 var dayDisplay = $('#current-Day'); 
 dayDisplay.text(moment().format('dddd, MMMM Do, YYYY'));
 
@@ -5,16 +8,28 @@ dayDisplay.text(moment().format('dddd, MMMM Do, YYYY'));
 var plannerText = $("textarea");
 var saveFile = $(".saveBtn");
 
-function storeLocal(div){
-    localStorage.getItem('textarea', []); 
+
+function storeLocal(){
+    console.log("I'm here");
+
+    localStorage.getItem('textarea', JSON.stringify(data)); 
     document.getElementById('') 
 }
 
-$('textarea').on('click', function(event){
-    var div = event.target;
-    if (div.matches('.saveBtn')) {
-        storeLocal(div);
-    }
-});
+
+
+$(document).ready(function(){
+    $('.saveBtn').each(function(){
+        $(this).click(function(event){
+            console.log("button clicked");
+            var div = event.target;
+            if (div.matches('.saveBtn')) {
+                storeLocal(div);
+            }
+        });
+    })
+
+})
+
 
 
